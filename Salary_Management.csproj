@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{170AE1C8-46EE-432F-AB5B-4E6116F198FB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Salary_Management</RootNamespace>
+    <AssemblyName>Salary_Management</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attendence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendence.designer.cs">
+      <DependentUpon>Attendence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cal_salary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cal_salary.designer.cs">
+      <DependentUpon>Cal_salary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Department.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Department.designer.cs">
+      <DependentUpon>Department.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emp_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emp_login.designer.cs">
+      <DependentUpon>Emp_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emp_reg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emp_reg.designer.cs">
+      <DependentUpon>Emp_reg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Designation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designation.Designer.cs">
+      <DependentUpon>Designation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chart.Designer.cs">
+      <DependentUpon>Chart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="delete1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delete1.Designer.cs">
+      <DependentUpon>delete1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Myaccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Myaccount.Designer.cs">
+      <DependentUpon>Myaccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search.designer.cs">
+      <DependentUpon>Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user_info.Designer.cs">
+      <DependentUpon>user_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIParent1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent1.Designer.cs">
+      <DependentUpon>MDIParent1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Salary_comp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Salary_comp.designer.cs">
+      <DependentUpon>Salary_comp.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Attendence.resx">
+      <DependentUpon>Attendence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cal_salary.resx">
+      <DependentUpon>Cal_salary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Department.resx">
+      <DependentUpon>Department.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designation.resx">
+      <DependentUpon>Designation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emp_login.resx">
+      <DependentUpon>Emp_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emp_reg.resx">
+      <DependentUpon>Emp_reg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart.resx">
+      <DependentUpon>Chart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delete1.resx">
+      <DependentUpon>delete1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Myaccount.resx">
+      <DependentUpon>Myaccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search.resx">
+      <DependentUpon>Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user_info.resx">
+      <DependentUpon>user_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent1.resx">
+      <DependentUpon>MDIParent1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Salary_comp.resx">
+      <DependentUpon>Salary_comp.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
