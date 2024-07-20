@@ -1,0 +1,100 @@
+sing System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data.SqlClient;
+using System.Data.Odbc;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace WindowsFormsApplication1
+{
+    public partial class Form1 : Form
+    {
+        OdbcConnection  cnn;
+        OdbcCommand cmd;
+        int pos;
+        OdbcDataReader dr;
+        DataTable dt;
+
+        OdbcDataAdapter da;
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+             cnn=new OdbcConnection("DSN=dbs");
+
+            cnn.Open();
+
+            cmd = cnn.CreateCommand();
+            cmd.CommandText = "select * from student";
+            
+            dr = cmd.ExecuteReader();
+
+            dr.Read();
+            textBox1.Text = Convert.ToString(dr.GetValue(0));
+            textBox2.Text = Convert.ToString(dr.GetValue(1));
+            //dr.Close();    
+            
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+                    dt = new DataTable();
+                    da = new OdbcDataAdapter("select * from student",cnn);
+                    OdbcCommandBuilder odb_builder = new OdbcCommandBuilder(da);
+                    da.Fill(dt);
+                    if (dt.Rows.Count == 0)
+                    {
+                        MessageBox.Show("no records");
+                        return;
+                    }
+                    if (pos < dt.Rows.Count - 1)
+                    {
+                        textBox1.Text = dt.Rows[pos]["roll"].ToString();
+                        textBox2.Text = dt.Rows[pos]["sname"].ToString();
+                        pos = pos + 1;
+                    }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            cmd.CommandText = "insert into student values('"+textBox1.Text+"','"+textBox2.Text+"')";
+            
+            dr = cmd.ExecuteReader();
+            dr.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            pos = 0;
+            textBox1.Text = dt.Rows[pos]["roll"].ToString();
+            textBox2.Text = dt.Rows[pos]["sname"].ToString();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            pos = dt.Rows.Count - 1;
+            textBox1.Text = dt.Rows[pos]["roll"].ToString();
+            textBox2.Text = dt.Rows[pos]["sname"].ToString();
+       
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (pos > 0)
+            {
+                pos = pos - 1;
+                textBox1.Text = dt.Rows[pos]["roll"].ToString();
+                textBox2.Text = dt.Rows[pos]["sname"].ToString();
+            }
+        }
+    }
+}
